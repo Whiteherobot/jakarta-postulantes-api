@@ -46,4 +46,36 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <!-- ./mvnw package -Pservidor arma en target/server un WildFly con solo
+             lo que la app usa (REST, CDI, JPA, JTA y H2) y la app ya desplegada. -->
+        <profile>
+            <id>servidor</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.wildfly.plugins</groupId>
+                        <artifactId>wildfly-maven-plugin</artifactId>
+                        <version>6.1.0.Final</version>
+                        <configuration>
+                            <discover-provisioning-info>
+                                <version>41.0.1.Final</version>
+                                <add-ons>
+                                    <add-on>h2-database:default</add-on>
+                                </add-ons>
+                            </discover-provisioning-info>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

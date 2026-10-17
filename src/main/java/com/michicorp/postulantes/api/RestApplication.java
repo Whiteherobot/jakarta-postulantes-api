@@ -1,9 +1,8 @@
-package ec.edu.ups.pruebaxx.pruebaxx;
+package com.michicorp.postulantes.api;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 
 @ApplicationPath("/api")
 public class RestApplication extends Application {
-    // Solo configuración base, sin inyección ni lógica
 }

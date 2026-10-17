@@ -1,0 +1,6 @@
+INSERT INTO Postulante (cedula, nombres, correo, puesto, experiencia, estado, fechaPostulacion) VALUES ('0102030400', 'María José Ordóñez', 'mj.ordonez@correo.ec', 'Analista de datos', 3, 'ENTREVISTA', DATE '2026-10-01');
+INSERT INTO Postulante (cedula, nombres, correo, puesto, experiencia, estado, fechaPostulacion) VALUES ('1710034065', 'Luis Alberto Pérez', 'lperez@correo.ec', 'Desarrollador backend', 5, 'POSTULADO', DATE '2026-10-03');
+INSERT INTO Postulante (cedula, nombres, correo, puesto, experiencia, estado, fechaPostulacion) VALUES ('0926687856', 'Andrea Cedeño Vera', 'andrea.cedeno@correo.ec', 'Desarrollador frontend', 2, 'CONTRATADO', DATE '2026-09-20');
+INSERT INTO Postulante (cedula, nombres, correo, puesto, experiencia, estado, fechaPostulacion) VALUES ('0104926548', 'Jorge Quezada', 'jquezada@correo.ec', 'Soporte técnico', 1, 'DESCARTADO', DATE '2026-09-28');
+INSERT INTO Postulante (cedula, nombres, correo, puesto, experiencia, estado, fechaPostulacion) VALUES ('0105112437', 'Paula Sarmiento', 'psarmiento@correo.ec', 'Desarrollador backend', 7, 'ENTREVISTA', DATE '2026-10-05');
+INSERT INTO Postulante (cedula, nombres, correo, puesto, experiencia, estado, fechaPostulacion) VALUES ('1712345675', 'Daniel Herrera', 'dherrera@correo.ec', 'Analista de datos', 0, 'POSTULADO', DATE '2026-10-08');

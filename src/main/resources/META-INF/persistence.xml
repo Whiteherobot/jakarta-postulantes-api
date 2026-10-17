@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="3.0"
-   xmlns="https://jakarta.ee/xml/ns/persistence"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="
-        https://jakarta.ee/xml/ns/persistence
-        https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+             xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
-   <persistence-unit name="pruebaxxPersistenceUnit" transaction-type="JTA">
-      <!-- Usar DataSource por defecto del servidor -->
-      <jta-data-source>java:comp/DefaultDataSource</jta-data-source>
-
-      <!-- Opcional: registrar clases manualmente (si no usas auto-scan) -->
-      <!-- <class>ec.edu.ups.pruebaxx.modelo.Candidato</class> -->
-
-      <properties>
-         <!-- Generación automática del esquema -->
-         <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
-         <property name="hibernate.show_sql" value="true"/>
-         <property name="hibernate.format_sql" value="true"/>
-         <!-- Dialecto opcional si quieres forzar uno específico -->
-         <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-      </properties>
-   </persistence-unit>
-
+    <persistence-unit name="postulantes" transaction-type="JTA">
+        <!-- Base por defecto del servidor (H2 en memoria en WildFly). Para otra base,
+             definir un datasource en WildFly y poner aquí su nombre JNDI. -->
+        <jta-data-source>java:comp/DefaultDataSource</jta-data-source>
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.sql-load-script-source" value="META-INF/datos-ejemplo.sql"/>
+        </properties>
+    </persistence-unit>
 </persistence>
